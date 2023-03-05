@@ -21,12 +21,13 @@ img{
 
 #head{
     font-size: 12px;
-    font-weight: bold;
+    font-family: Poppins-Bold;
     color: #3F0F88;
     line-height: 100%;
 }
 
 #panel{
+    font-family: Poppins-Medium;
     font-size: 14px;
     transform: translate(0%, -120%);
     color: #707070;
@@ -40,22 +41,45 @@ input[type=text], input[type=password]{
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 10px;
-    font-family: Poppins;
+    font-family: Poppins-Medium;
+}
+
+input[type=submit]{
+    font-family: Poppins-Medium;
+    background-color: #3F0F88;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 125px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
 }
 
 .forgot_pass{
-    padding: 0px 145px;
+    padding: 0px 180px 30px;
+    font-family: Poppins-Medium;
+    font-size: 12px;
 }
 
 #account{
+    padding: 20px 38px;
+    font-size: 14px;
     color: #707070;
+    font-family: Poppins-Medium;
 }
 
 
 h1{
-    font-weight: bold;
+    font-family: Poppins-Bold;
     font-size: 35px;
 
+}
+
+.signup{
+    font-family: Poppins-Bold;
 }
 
 .box{
