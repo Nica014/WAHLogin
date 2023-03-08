@@ -1,20 +1,24 @@
-
+<router-outlet></router-outlet>
 <div class="box">
+    <div class="login-vector">
+        <img src="assets/image/Login.png" class="login">
+    </div>
 
-    <img src="assets/image/login.png">
+    <img src="assets/image/wahlogo.png" class="wah-logo">
     <p id="head">WAH <br> Cooperative</p>
+    
     <h1>Welcome</h1>
     <p id="panel">Enter details to login to the admin panel</p>
     <form>
-        
         <div class="txt_field">
             <input type="text" name="email" placeholder="Email" required><br>
-            <input type="password" name="pass" placeholder="Password" required>
+            <input [type]="changetype?'password':'text'" name="pass" placeholder="Password" required>
+            <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
         </div>
         <div class="forgot_pass">
-            <a href="#">Forgot Password?</a>
+            <a href="#" class="forgot">Forgot Password?</a>
         </div>
-        <input type="submit" value="Login">
+        <button class="submit">Login</button>
         <div id="account">
             Don't have an account? <a href="#" class="signup">Sign Up</a>
         </div>

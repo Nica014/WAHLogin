@@ -3,6 +3,7 @@
 .body{
     background-color: #3F0F88;
     font-family: Poppins;
+    overflow: hidden;
 }
 a:link, a:active, a:visited{
     color: #3F0F88;
@@ -11,30 +12,49 @@ a:link, a:active, a:visited{
 
 }
 
-img{
+.login{
+    width: 480px;
+    height: 480px;
+    transform: translate(-89%, 5%);
+}
+
+.login-vector{
+    border-radius: 30px;
     position: absolute;
-    transform: translate(-5%, -3%);
-    padding-left: 44%;
-    width: 434px;
-    height: 434px;
+    transform: translate(71%, -2%);
+    padding-left: 45%;
+    width: 70px;
+    height: 530px;
+    background-color: #0099FF;
+}
+
+.wah-logo{
+    width: 40px;
+    height: 40px;
 }
 
 #head{
+    padding: 0px 50px;
     font-size: 12px;
     font-family: Poppins-Bold;
     color: #3F0F88;
     line-height: 100%;
+    transform: translate(-0%, -210%);
 }
 
 #panel{
     font-family: Poppins-Medium;
     font-size: 14px;
-    transform: translate(0%, -120%);
+    transform: translate(-2.5%, -120%);
     color: #707070;
+    padding: 20px;
+}
+
+form{
+    transform: translate(-0%, -30%);
 }
 
 input[type=text], input[type=password]{
-    transform: translate(0%, 0%);
     width: 38%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -42,44 +62,62 @@ input[type=text], input[type=password]{
     border: 2px solid #ccc;
     border-radius: 10px;
     font-family: Poppins-Medium;
+    outline-color: #3F0F88;
 }
 
-input[type=submit]{
+.submit{
     font-family: Poppins-Medium;
     background-color: #3F0F88;
     border: none;
     border-radius: 10px;
     color: white;
-    padding: 12px 125px;
+    padding: 12px 140px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    
+}
+
+.submit:hover{
+    background-color: #0099FF;
+}
+
+.eye{
+    position: absolute;
+    right: 64%;
+    bottom: 63%;
+    cursor: pointer;
 }
 
 .forgot_pass{
-    padding: 0px 180px 30px;
+    padding: 0px 215px 30px;
     font-family: Poppins-Medium;
     font-size: 12px;
 }
 
+.forgot_pass:hover{
+    color: #0099FF;
+}
+
 #account{
-    padding: 20px 38px;
+    padding: 20px 47px;
     font-size: 14px;
     color: #707070;
     font-family: Poppins-Medium;
 }
 
-
 h1{
     font-family: Poppins-Bold;
     font-size: 35px;
-
+    transform: translate(0%, -50%);
 }
 
 .signup{
     font-family: Poppins-Bold;
+}
+
+.signup:hover {
+    color: #0099FF;
 }
 
 .box{
@@ -87,10 +125,17 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 900px;
-    height: 500px;
+    width: 1000px;
+    height: 600px;
     background: white;
     border-radius: 30px;
     padding: 45px 70px;
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 620px),(max-height: 620px){
+    .box{
+        max-height: 100%;
+        max-width: 100%;
+    }
 }

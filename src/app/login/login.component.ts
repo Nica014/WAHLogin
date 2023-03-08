@@ -9,6 +9,13 @@ import { DOCUMENT } from '@angular/common';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
+  visible:boolean = true;
+  changetype:boolean = true;
+  viewpass(){
+    this.visible = !this.visible
+    this.changetype = !this.changetype
+  }
+
   constructor(@Inject(DOCUMENT) private _document: any){}
 
   ngOnInit() {
