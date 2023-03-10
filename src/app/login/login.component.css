@@ -122,6 +122,13 @@ form{
     padding: 20px;
 }
 
+.eye{
+    position: absolute;
+    left: 90%;
+    bottom: 0%;
+    cursor: pointer;
+}
+
 .forgot-pass{
     font-family: Poppins-Medium;
     font-size: 0.8rem;
