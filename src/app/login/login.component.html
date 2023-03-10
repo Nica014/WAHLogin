@@ -1,27 +1,41 @@
 <router-outlet></router-outlet>
-<div class="box">
-    <div class="login-vector">
-        <img src="assets/image/Login.png" class="login">
+<main>
+    <div class="box">
+        <div class="inner-box">
+            <div class="login-vector">
+                <img src="assets/image/Login.png" class="login">
+            </div>
+
+            <div class="form-wrap">    
+                <form>
+                    <div class="wah-logo">
+                        <img src="assets/image/wahlogo.png" alt="WAH Logo">
+                        <p>WAH <br> Cooperative</p>
+                    </div>
+
+                    <div class="heading">
+                        <h1>Welcome</h1>
+                        <p>Enter details to login to the admin panel</p>
+                    </div>
+                
+                    <div class="txt-field">
+                        <div class="txt-wrap">
+                            <input type="text" minlength="4" class="input-field" id="email" placeholder="Email" required><br>
+                        </div>
+                        <div class="txt-wrap">
+                            <input [type]="changetype?'password':'text'" minlength="4" class="input-field" id="pass" placeholder="Password" required>
+                            <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+                        </div>
+        
+                            <a href="#" class="forgot-pass">Forgot Password?</a><br>
+                            <button class="submit">Login</button>
+
+                            <p class="account">
+                                Don't have an account? <a href="#" class="signup">Sign Up</a>
+                            </p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <img src="assets/image/wahlogo.png" class="wah-logo">
-    <p id="head">WAH <br> Cooperative</p>
-    
-    <h1>Welcome</h1>
-    <p id="panel">Enter details to login to the admin panel</p>
-    <form>
-        <div class="txt_field">
-            <input type="text" name="email" placeholder="Email" required><br>
-            <input [type]="changetype?'password':'text'" name="pass" placeholder="Password" required>
-            <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
-        </div>
-        <div class="forgot_pass">
-            <a href="#" class="forgot">Forgot Password?</a>
-        </div>
-        <button class="submit">Login</button>
-        <div id="account">
-            Don't have an account? <a href="#" class="signup">Sign Up</a>
-        </div>
-    </form>
-
-</div>
+</main>
