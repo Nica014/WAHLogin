@@ -173,9 +173,8 @@ form{
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 14px;
+    transition: 0.3s;
     padding-left: 6.5rem;
-    display: inline-block;
 }
 
 .signup:hover{

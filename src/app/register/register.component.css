@@ -121,7 +121,7 @@ form {
     margin-bottom: 2rem;
   }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=email], input[type=password]{
     position: absolute;
     width: 100%;
     padding: 12px 20px;
@@ -160,6 +160,7 @@ input[type=checkbox]{
     box-sizing: border-box; 
     width: 17px;
     height: 17px;
+    border-radius: -1.2em;
 }
 
 .submit{
