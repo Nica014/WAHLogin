@@ -1,184 +1,245 @@
 *, *::before, *::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 
 main{
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    background-color: #3F0F88;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #3F0F88;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box{
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    height: 600px;
-    background: white;
-    border-radius: 30px;
-    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.50);
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.50);
 }
 
 .inner-box{
-    position: absolute;
-    width: calc(100% - 4.1rem);
-    height: calc(100% - 4.1rem);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-wrap{
-    position: absolute;
-    height: 100%;
-    width: 45%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
 }
 
 .login-vector{
-    position: absolute;
-    height: 100%;
-    width: 55%;
-    left: 45%;
-    top: 0;
-    background-color: #0099FF;
-    border-radius: 25px;
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  left: 45%;
+  top: 0;
+  background-color: #0099FF;
+  border-radius: 2rem;
 }
 
+
 .login-vector img{
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 form{
-    max-width: 310px;
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
+  max-width: 310px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 
+}
+/**
+form.register-form{
+  opacity: 0;
+  pointer-events: none;
+}
+**/
 .wah-logo{
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-    margin-top: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
 }
 
 .wah-logo p{
-    font-family: Poppins-Medium;
-    color: #3F0F88;
-    font-size: .9rem;
-    line-height: 100%;
-    letter-spacing: 0.2px;
-    font-weight: 700;
+  font-family: Poppins-Medium;
+  color: #3F0F88;
+  font-size: .9rem;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+  font-weight: 700;
 }
 
 .wah-logo img{
-    width: 40px;
-    margin: 0.3rem;
+  width: 40px;
+  margin-right: 0.3rem;
 }
 
 .heading h1, p{
-    font-family: Poppins-Medium;
+  font-family: Poppins-Medium;
 }
 
 .heading h1{
-    font-size: 2.5rem;
-    font-weight: 1000;
-    color: #151111;
-    letter-spacing: -0.5px;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: #151111;
+  letter-spacing: -0.5px;
 }
 
 .heading p{
-    color: #707070;
-    font-size: .96rem;
+  color: #707070;
+  font-size: .96rem;
+  display: inline;
 }
 
 .txt-wrap{
-    position: relative;
-    height: 30px;
-    margin-bottom: 1.5rem;
+  position: relative;
+  height: 30px;
+  margin-bottom: 1.5rem;
 }
 
 .input-field{
-    font-family: Poppins-Medium;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline-color: #3F0F88;
-    border: 2px solid #ccc;
-    border-radius: 0.6rem;
-    padding: 20px;
+  font-family: Poppins-Medium;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline-color: #3F0F88;
+  border: 2px solid #ccc;
+  border-radius: 0.6rem;
+  padding: 20px;
 }
 
+
 .eye{
-    position: absolute;
-    left: 90%;
-    bottom: 0%;
-    cursor: pointer;
+  position: absolute;
+  left: 90%;
+  bottom: 0%;
+  cursor: pointer;
 }
 
 .forgot-pass{
-    font-family: Poppins-Medium;
-    font-size: 0.8rem;
-    color: #3F0F88;
-    text-decoration: none;
-    transition: 0.3s;
-    padding-left: 12.2rem;
-    margin-bottom: 1.5rem;
+  font-family: Poppins-Medium;
+  font-size: 0.8rem;
+  color: #3F0F88;
+  text-decoration: none;
+  transition: 0.3s;
+  padding-left: 12.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .forgot-pass:hover{
-    opacity: 80%;
+  opacity: 80%;
 }
 
 .submit{
-    font-family: Poppins-Medium;
-    display: inline-block;
-    width: 100%;
-    height: 43px;
-    background-color: #3F0F88;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.6rem;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    transition: 0.3s;
+  font-family: Poppins-Medium;
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #3F0F88;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: 0.3s;
 }
 
 .submit:hover{
-    opacity: 80%;
+  opacity: 80%;
 }
 
 .account{
-    font-family: Poppins-Medium;
-    color: #707070;
-    font-size: 0.9rem;
-    text-align: center;
+  font-family: Poppins-Medium;
+  color: #707070;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.signup{
-    font-family: Poppins-Bold;
-    color: #3F0F88;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: 0.3s;
+.toggle{
+  font-family: Poppins-Bold;
+  color: #3F0F88;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.signup:hover{
-    opacity: 80%;
+.toggle:hover{
+  opacity: 80%;
+}
+
+/*REGISTER*/
+
+a:link, a:active, a:visited{
+  color: #3F0F88;
+  text-decoration: none;
+  background-color: transparent;
+
+}
+
+.reg-wrap {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  right: 0;
+}
+
+input[type=checkbox]{
+  transform: translate(-30%, 20%);
+  display: flexbox;
+  box-sizing: border-box; 
+  width: 17px;
+  height: 17px;
+  border-radius: -1.2em;
+}
+
+.terms{
+  font-family: Poppins-Medium;
+  color: #707070;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.reg-vector{
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  right: 45%;
+  top: 0;
+  background-color: #0099FF;
+  border-radius: 2rem;
+}
+
+
+.reg-vector img{
+  width: 100%;
+  height: 100%;
 }

@@ -1,10 +1,10 @@
 <main> 
-    <div class="layout">
+    <div class="layout" >
         <div class ="inner-box">
-            <div class="vector"><img src="assets/image/register.png " ></div>
+            <div class="vector" ><img src="assets/image/register.png " ></div>
                 <div class="reg-wrap">
                     
-                    <form>
+                    <form [@formState]="registerState">
                         
                         <div class="whlogo"> 
                             <img src="assets/image/wahlogo.png">
@@ -16,7 +16,7 @@
                         <h6>Create an account to login</h6>
                         </div>
                         
-                            <div class="text_field">
+                            <div class="text_field" >
                                 <div class="text-wrap">
                                     <input type="text" name="name" placeholder="Name" required> <br>
                                 </div>
@@ -38,8 +38,8 @@
                                 
                                     <button class="submit"> Sign Up </button>
                                     <div id="account">
-                                        Already have an account? <a href="login" class="login">Login</a>
-                                     </div>
+                                        Already have an account? <a  (click)="toggle()" class="login">Login</a>
+                                    </div>
                     </form>
                 </div>
         </div>

@@ -2,12 +2,12 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation, Inject } from '@angula
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-check-email',
-  templateUrl: './check-email.component.html',
-  styleUrls: ['./check-email.component.css'],
+  selector: 'app-pass-done',
+  templateUrl: './pass-done.component.html',
+  styleUrls: ['./pass-done.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class CheckEmailComponent implements OnInit, OnDestroy {
+export class PassDoneComponent implements OnInit, OnDestroy {
   constructor(@Inject(DOCUMENT) private _document: any){}
 
   ngOnInit() {
