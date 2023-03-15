@@ -29,7 +29,7 @@
                             <button class="submit">Login</button>
 
                             <p class="account">
-                                Don't have an account? <a  class="toggle" (click)="toggle()"  >Sign Up</a>
+                                Don't have an account? <a  class="toggle" (click)="toggle()" onclick="clearInputField()" >Sign Up</a>
                             </p>
                     </div>
                 </form>
@@ -49,17 +49,17 @@
                             
                                 <div class="txt-field">
                                     <div class="txt-wrap">
-                                        <input type="text" name="name" class="input-field" placeholder="Name" required> <br>
+                                        <input type="text" name="name" class="input-field" id="name" placeholder="Name" required> <br>
                                     </div>
                                     <div class="txt-wrap">
-                                        <input type="email" name="email" class="input-field" placeholder="Email" required> <br>
+                                        <input type="email" name="email" class="input-field" id="reg-email" placeholder="Email" required> <br>
                                     </div>
                                     <div class="txt-wrap">
-                                        <input [type]="changetype?'password':'text'" minlength="8" name="pass" class="input-field" placeholder="Password" required>
+                                        <input [type]="changetype?'password':'text'" minlength="8" name="pass" class="input-field" id="reg-pass" placeholder="Password" required>
                                         <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span><br>
                                     </div>
                                     <div class="txt-wrap">
-                                        <input [type]="cchangetype?'password':'text'" minlength="8" name="cpass" class="input-field" placeholder="Confirm Password" required>
+                                        <input [type]="cchangetype?'password':'text'" minlength="8" name="cpass" class="input-field" id="confirm-pass" placeholder="Confirm Password" required>
                                     <span class="eye" (click)="cviewpass()"><i [ngClass]="cvisible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
                                     
                                         <button class="submit"> Sign Up </button>
                                         <div class="account">
-                                            Already have an account? <a class="toggle" (click)="toggle()" >Login</a>
+                                            Already have an account? <a class="toggle" (click)="toggle()" onclick="clearInputField()" >Login</a>
                                         </div>
                         </form>
                     </div>    

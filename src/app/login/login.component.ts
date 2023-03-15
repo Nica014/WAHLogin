@@ -3,6 +3,8 @@ import { DOCUMENT } from '@angular/common';
 import { transition, state, trigger, animate, style } from '@angular/animations';
 import { formState, formState2, formState3, formState4, formState5, fade } from '../animation';
 
+declare function clearInputField(): void;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

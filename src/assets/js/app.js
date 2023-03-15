@@ -1,3 +1,4 @@
+/** 
 const inputs = document.querySelectorAll(".input-field");
 const toggle_btn = document.querySelectorAll(".toggle");
 const main = document.querySelector("main");
@@ -37,3 +38,13 @@ function moveSlider() {
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
+*/
+
+function clearInputField() {
+    document.getElementById("email").value = '';
+    document.getElementById("pass").value = '';
+    document.getElementById("name").value = '';
+    document.getElementById("confirm-pass").value = '';
+    document.getElementById("reg-pass").value = '';
+    document.getElementById("reg-email").value = '';
+}
