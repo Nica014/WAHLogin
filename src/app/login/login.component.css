@@ -80,9 +80,9 @@ form.register-form{
 }
 **/
 .wah-logo{
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
 }
 
 .wah-logo p{

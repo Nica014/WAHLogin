@@ -84,13 +84,15 @@ form {
 .whlogo{
     display: flex;
     align-items: center;
+    margin-top: -9px;
+}
+.whlogo p{
     font-family: Poppins-Medium;
     font-size: .9rem;
-    margin-top: -9px;
-    font-weight: 700;
     line-height: 100%;
     color: #3F0F88;
-    transform: translate(-3%, -10%);
+    letter-spacing: 0.2px;
+    font-weight: 700;
 }
 
 .whlogo img {
@@ -108,12 +110,9 @@ form {
     color: #151111;
     letter-spacing: -0.5px;
 }
-.heading h6{
+.heading p{
     color: #707070;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 0.75rem;
-    transform: translate(1%, -20%);
+    font-size: 0.96rem;
 }
 
 .text-wrap {
@@ -132,6 +131,12 @@ input[type=text], input[type=email], input[type=password]{
     font-family: Poppins-Medium;
     outline-color: #3F0F88;
 }
+
+input[type=checkbox] + label:before{
+  content: "\2714";
+  border-radius: 1.2em;
+}
+
 input:hover{
     outline: #3F0F88;
 }
