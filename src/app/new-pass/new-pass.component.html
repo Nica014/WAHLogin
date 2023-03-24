@@ -18,16 +18,33 @@
                         <p>Must be at least 8 characters.</p>
                     </div>
                 
-                    <div class="txt-field">
+                    <div class="txt-field" >
                         <div class="txt-wrap">
+                     <mat-card>
+
+                        <mat-card-content>
+
+                            <form [formGroup]="form" name="form">
+                            <mat-form-field style= "width:100%;height:100%;border-color:#3F0F88;border:2pxsolid#ccc;border-radius:0.6rem;border-style: solid;">
                             <label for="pass"> New Password</label>
-                            <input [type]="changetype?'password':'text'" minlength="8" class="input-field" id="pass" placeholder="Enter new password" required>
+
+                            <input [type]="changetype?'password':'text'" minlength="8" maxlength="32" class="input-field" id="pass" matInput placeholder="Input password"  formControlName="password" required>
+
                             <div class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></div>
+                        </mat-form-field>
+                            <strength-meter [value]="form.value.password" (measure)="onStrengthChange($event)"></strength-meter>
+                        </form>
+                        
+                    </mat-card-content>
+                    </mat-card>
                         </div>
+
+                        
+
 
                         <div class="txt-wrap">
                             <label for="pass2"> Confirm Password</label>
-                            <input [type]="cchangetype?'password':'text'"  minlength="8"  class="input-field" id="pass2" placeholder="Confirm your new password" required>
+                            <input [type]="cchangetype?'password':'text'"  minlength="8" maxlength="32"  class="input-field" id="pass2" placeholder="Confirm your new password" required>
                             <div class="eye2" (click)="cviewpass()"><i [ngClass]="cvisible?'fa fa-eye-slash':'fa fa-eye'"></i></div>
                         </div>
                         

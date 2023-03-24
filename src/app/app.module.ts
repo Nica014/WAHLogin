@@ -9,6 +9,10 @@ import { CheckEmailComponent } from './check-email/check-email.component';
 import { NewPassComponent } from './new-pass/new-pass.component';
 import { PassDoneComponent } from './pass-done/pass-done.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { StrengthMeterModule } from "ngx-strength-meter";
+import { MatInputModule } from "@angular/material/input";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -18,12 +22,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ForgotPassComponent,
     CheckEmailComponent,
     NewPassComponent,
-    PassDoneComponent
+    PassDoneComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatCardModule,
+    StrengthMeterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
