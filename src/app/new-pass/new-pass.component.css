@@ -133,16 +133,16 @@ label{
     flex-direction: column;
 }
 
-.input-field matInput{
-    width: 100%;
-    height: 100%;
 
+.meter{
+    margin-top: 1.5em;
+    max-width: 500px;
+    width: 300px;
 }
-
 .eye{
     position: absolute;
     left: 90%;
-    bottom: -140%;
+    bottom: 10%;
     cursor: pointer;
 }
 

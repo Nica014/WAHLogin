@@ -11,8 +11,7 @@ import { PassDoneComponent } from './pass-done/pass-done.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StrengthMeterModule } from "ngx-strength-meter";
-import { MatInputModule } from "@angular/material/input";
-import { MatCardModule } from "@angular/material/card";
+
 
 @NgModule({
   declarations: [
@@ -29,12 +28,10 @@ import { MatCardModule } from "@angular/material/card";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatCardModule,
+
     StrengthMeterModule
   ],
   providers: [],
