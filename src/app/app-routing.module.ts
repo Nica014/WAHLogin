@@ -7,6 +7,8 @@ import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { CheckEmailComponent } from './check-email/check-email.component';
 import { NewPassComponent } from './new-pass/new-pass.component';
 import { PassDoneComponent } from './pass-done/pass-done.component';
+import { PasswordStrengthComponent } from './password-strength/password-strength.component';
+import { RegisterPaginationComponent } from './register-pagination/register-pagination.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,14 @@ const routes: Routes = [
   {
     path: 'pass-done', 
     component: PassDoneComponent 
+  },
+  {
+    path: 'password-strength', 
+    component: PasswordStrengthComponent 
+  },
+  {
+    path: 'register-pagination',
+    component: RegisterPaginationComponent
   }
 ];
 

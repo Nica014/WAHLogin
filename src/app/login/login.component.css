@@ -99,6 +99,10 @@ form.register-form{
   margin-right: 0.3rem;
 }
 
+.heading{
+  background-color: #0099FF;
+}
+
 .heading h1, p{
   font-family: Poppins-Medium;
 }

@@ -4,7 +4,7 @@
             <div class="vector" ><img src="assets/image/register.png " ></div>
                 <div class="reg-wrap">
                     
-                    <form [@formState]="registerState">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                         
                         <div class="whlogo"> 
                             <img src="assets/image/wahlogo.png">
@@ -15,21 +15,29 @@
                             <p>Create an account to login</p>
                         </div>
                         
-                            <div class="text_field" >
+                            <div class="text_field" isDisplayed>
                                 <div class="text-wrap">
-                                    <input type="text" name="name" placeholder="Name" required> <br>
+                                    <input formControlName="name" type="text" name="name" placeholder="Name" required> <br>
                                 </div>
+
                                 <div class="text-wrap">
-                                    <input type="email" name="email" placeholder="Email" required> <br>
+                                    <input formControlName="email" type="email" name="email" placeholder="Email" required> <br>
                                 </div>
+
                                 <div class="text-wrap">
-                                    <input [type]="changetype?'password':'text'" name="pass" placeholder="Password" required>
+                                    <input formControlName="pass" [type]="changetype?'password':'text'" name="pass" placeholder="Password" required>
                                     <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span><br>
                                 </div>
+                                <div>
+                                    <strength-meter [value]="registerForm.value.pass" (measure)="onStrengthChange($event)"></strength-meter>
+                                </div> 
+
+
                                 <div class="text-wrap">
-                                    <input [type]="cchangetype?'password':'text'" name="cpass" placeholder="Confirm Password" required>
+                                    <input formControlName="cpass" [type]="cchangetype?'password':'text'" name="cpass" placeholder="Confirm Password" required>
                                     <span class="eye2" (click)="cviewpass()"><i [ngClass]="cvisible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
                                 </div>
+                                <div *ngIf="registerForm.get('cpass')!.touched && registerForm.get('cpass')!.invalid && registerForm.controls['cpass'].errors!['passwordMatch']">password not match</div>
                             </div>
                                 <div class="terms">
                                     <input type="checkbox">  I agree to the   <a href="#" class="condition"> &nbsp; Terms & Condition</a>
@@ -37,7 +45,7 @@
                                 
                                     <button class="submit"> Sign Up </button>
                                     <div id="account">
-                                        Already have an account? <a  (click)="toggle()" class="login">Login</a>
+                                        Already have an account? <a class="login">Login</a>
                                     </div>
                     </form>
                 </div>

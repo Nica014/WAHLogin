@@ -7,7 +7,7 @@
             </div>
 
             <div class="form-wrap">    
-                <form>
+                <form [formGroup]="form" name="form">
                     <div class="wah-logo">
                         <img src="assets/image/wahlogo.png" alt="WAH Logo">
                         <p>WAH <br> Cooperative</p>
@@ -20,10 +20,10 @@
                 
                     <div class="txt-field" >
                         <div class="txt-wrap">
-                            <form [formGroup]="form" name="form">
+                            
                             <input [type]="changetype?'password':'text'" minlength="8" maxlength="32" class="input-field" id="pass" matInput placeholder="Input password"  formControlName="password" required>
                             <div class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></div> 
-                        </form>     
+                            
                         <div class="meter"> <strength-meter [value]="form.value.password" (measure)="onStrengthChange($event)"></strength-meter>
                         </div>           
                         </div>

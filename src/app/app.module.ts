@@ -11,6 +11,8 @@ import { PassDoneComponent } from './pass-done/pass-done.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StrengthMeterModule } from "ngx-strength-meter";
+import { PasswordStrengthComponent } from './password-strength/password-strength.component';
+import { RegisterPaginationComponent } from './register-pagination/register-pagination.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { StrengthMeterModule } from "ngx-strength-meter";
     CheckEmailComponent,
     NewPassComponent,
     PassDoneComponent,
+    PasswordStrengthComponent,
+    RegisterPaginationComponent,
 
   ],
   imports: [

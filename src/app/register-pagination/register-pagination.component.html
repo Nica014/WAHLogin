@@ -1,0 +1,122 @@
+<router-outlet></router-outlet>
+<main> 
+    <div class="layout" >
+        <div class ="inner-box">
+           
+            <div class="reg-wrap">
+                    
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"  >
+                        <div class="fullNamePage">
+                            <div class="whlogo"> 
+                                <img src="assets/image/wahlogo.png">
+                                <p>WAH <br> Cooperative</p>
+                            </div>
+                            <div class="heading">
+                                <h1>Get Started</h1>
+                                <p>Create an account to login</p>
+                            </div>
+                            
+                                <div class="info1" [@formState2]="info1State">
+                                    <div class="text_field" >
+                                        <div class="text-wrap">
+                                            <input type="text" name="lName" placeholder="Last Name" required> <br>
+                                        </div>
+
+                                        <div class="text-wrap">
+                                            <input type="text" name="fName" placeholder="First Name" required> <br>
+                                        </div>
+
+                                        <div class="text-wrap" class="text-wrap2">
+                                            <input class="mName" type="text" name="mName" placeholder="Middle Name" required><br>
+                                            <input class="nSuffix" type="text" name="nSuffix" placeholder="Suffix">
+                                        </div> 
+
+                                        <div class="text-wrap" class="text-wrap3">
+                                            <select>
+                                                <option disabled selected hidden>Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="pref">Prefer not to say</option>
+                                            </select>
+                                            <input class="dateOfBirth" type="date" name="dOBirth" placeholder="Date of Birth" required>
+                                        </div> 
+                                    </div>
+                                
+                                    
+                                        <button class="submit" (click)="toggle()"> Next </button>
+                                    <div id="account">
+                                        Already have an account? <a [routerLink]="['/login']" class="login">Login</a>
+                                    </div>
+
+                                </div>
+                            
+                                <div class="info2"  [@formState2]="info2State">
+
+                                    <div class="return">
+                                        
+                                    </div>
+                                    
+                                    <div class="text_field" >
+                                        <div class="text-wrap">
+                                            <input type="number" name="PhoneNum" placeholder="Phone Number" required> <br>
+                                        </div>
+
+                                        <div class="text-wrap">
+                                            <input type="text" name="company" placeholder="Company Name" required> <br>
+                                        </div>
+
+                                        <div class="text-wrap" class="text-wrap2">
+                                            <input type="text" name="department" placeholder="Department" required><br>
+                                        </div> 
+                                    </div>
+                                
+                                    
+                                        <button class="submit" (click)="toggle()"> Next </button>
+                                        <button class="back" (click)="toggle2()"> Back </button>
+                                        <!-- <div class="account">
+                                            <a [routerLink]="['/login']" class="back">
+                                                <i class="ti ti-arrow-left"></i><small>Back</small>
+                                            </a>
+                                    </div> -->
+                                    
+                                </div>
+                                
+
+                                <div class="info3"  [@slightright2]="info3State" >
+                                    
+                                    <div class="text_field" >
+                                        <div class="text-wrap">
+                                            <input type="text" name="email" placeholder="Email" required> <br>
+                                        </div> 
+                                        <div class="text-wrap">
+                                            <input formControlName="pass" [type]="changetype?'password':'text'" name="pass" placeholder="Password" required>
+                                            <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye-slash':'fa fa-eye'"></i></span><br>
+                                        </div>
+                                        <div>
+                                            <strength-meter [value]="registerForm.value.pass" (measure)="onStrengthChange($event)"></strength-meter>
+                                        </div> 
+
+                                        <div class="text-wrap">
+                                            <input formControlName="cpass" [type]="cchangetype?'password':'text'" name="cpass" placeholder="Confirm Password" required>
+                                            <span class="eye2" (click)="cviewpass()"><i [ngClass]="cvisible?'fa fa-eye-slash':'fa fa-eye'"></i></span>
+                                        </div>
+                                        <div *ngIf="registerForm.get('cpass')!.touched && registerForm.get('cpass')!.invalid && registerForm.controls['cpass'].errors!['passwordMatch']">password not match</div>
+                                    </div>
+                                
+                                    
+                                        <button class="submit"> Submit </button>
+                                        <button class="back" (click)="toggle2()"> Back </button>
+                                    
+                                </div>
+                            
+                            
+                        </div>
+            </form>
+            </div>
+            <div class="reg-vector" >
+                <img src="assets/image/login.png" class="register"> 
+            </div>
+        </div>
+    </div>
+</main>
+

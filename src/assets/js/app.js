@@ -48,3 +48,21 @@ function clearInputField() {
     document.getElementById("reg-pass").value = '';
     document.getElementById("reg-email").value = '';
 }
+
+
+const indicator = document.querySelector(".indicator");
+const input = document.querySelector("input");
+const weak = document.querySelector(".weak");
+const medium = document.querySelector(".medium");
+const strong = document.querySelector(".strong");
+const text = document.querySelector(".text"); 
+
+function trigger(){
+
+  if(input.value != ""){
+    indicator.style.display = "block"
+    indicator.style.display = "flex"
+  }else{
+
+  }
+}
